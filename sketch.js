@@ -1,9 +1,6 @@
-var song;
-var fft;
-var button;
-var wave;
-var wave1;
-var wave2;
+
+// Member variables
+var song, fft, button, wave, wave1, wave2;
 
 function toggleSong() {
     if (song.isPlaying()) {
@@ -13,16 +10,29 @@ function toggleSong() {
     }
 }
 
+
+// Need to work on getting a function that loads sound from what is currently being played
 function preload() {
     song = loadSound('Atmosphere-Sunshine.mp3');
 }
 
 function setup() {
-    createCanvas(256, 256);
 
-    fft = new p5.FFT(0.95, 256);
+    // Variable for adding the visualizer to the div #visualizer in the DOM
+    var clientHeight = document.getElementById('visualizer').clientHeight;
+    var clientWidth = document.getElementById('visualizer').clientWidth;
 
-    var dark = color('rgb(22, 25, 37)');
+    console.log("Height" + clientHeight);
+    console.log("Width" + clientWidth);
+
+
+    var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
+    myCanvas.parent('visualizer');
+
+
+    fft = new p5.FFT(0.9, 64);
+
+    var dark = color('rgba(22, 25, 37, .85)');
     var grey = color('rgb(142, 137, 137)');
     var purple = color('rgb(106, 63, 190)');
     var lightPurple = color('rgb(200, 109, 215)');
@@ -34,6 +44,10 @@ function setup() {
     button = createButton('toggle');
     button.mousePressed(toggleSong);
     song.play();
+}
+
+function windowResized() {
+    resizeCanvas(window.innerWidth, window.innerHeight);
 }
 
 function draw() {
