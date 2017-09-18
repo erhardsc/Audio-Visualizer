@@ -1,3 +1,4 @@
+// Wave Class
 function Wave (color, posX, posY, limiter, flipWave) {
 
     this.mColor = color;
@@ -5,6 +6,7 @@ function Wave (color, posX, posY, limiter, flipWave) {
     this.mPosY = posY;
     this.mLimiter = limiter;
     this.mFlipWave = flipWave;
+    this.yoff = 0.0;
 
 
     this.waveSpectrum = function () {
@@ -12,21 +14,37 @@ function Wave (color, posX, posY, limiter, flipWave) {
         return this.spectrum;
     }
 
-    this.show = function () {
-        beginShape();
-            stroke(this.mColor);
-            strokeWeight(100);
-            smooth();
-            this.position();
-            this.waveSpectrum();
+    this.show = function (amp) {
 
-                // if (this.mFlipWave){
-                //    this.flipWaveHorizontally();
-                //    //console.log("flip");
-                // } else {
-                    this.amplitude();
-                //}
+        // beginShape();
+        //     stroke(this.mColor);
+        //     strokeWeight(10);
+        //     smooth();
+        //     this.position();
+        //     this.waveSpectrum();
+        //
+        //         // if (this.mFlipWave){
+        //         //    this.flipWaveHorizontally();
+        //         //    //console.log("flip");
+        //         // } else {
+        //             this.amplitude();
+        //         //}
+        // endShape();
+        this.radius = 150;
+
+        beginShape();
+        for (var a = 0; a < TWO_PI; a += 0.1) {
+
+            this.offset = map(amp, 0, 256, -25, 25);
+            this.r = this.radius + this.offset;
+            this.x = this.r * cos(a);
+            this.y = this.r * sin(a);
+            vertex(this.x, this.y);
+
+            //ellipse(x, y, 4, 4);
+        }
         endShape();
+
     }
 
     // this.vertexWave = function () {
@@ -54,10 +72,16 @@ function Wave (color, posX, posY, limiter, flipWave) {
 
             this.amp = this.waveSpectrum()[i];
 
-            this.y = map(this.amp/this.mLimiter, 0, 256, height, 0);
+            //this.y = map(this.amp/this.mLimiter, 0, 256, height, 0);
 
-            line(i * 50, height * 2, i * 50, this.y);
+            show(amp);
+
+            //line(i * 50, height * 2, i * 50, this.y);
+
+           // ellipse(i * 50, this.y, i * 50, height);
         }
+
+        //ellipse(i * 50, this.y, i * 50, height);
         return this.amp;
     }
 
