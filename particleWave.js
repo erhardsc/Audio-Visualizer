@@ -1,12 +1,14 @@
 
 // ParticleWave class constructor
 
-function ParticleWave(x, y, radius) {
+function ParticleWave(xpos, ypos, radius, flattener, color) {
 
     // Declare members
-    this.mX = x;
-    this.mY = y;
+    this.mX = xpos;
+    this.mY = ypos;
     this.mRadius = radius;
+    this.mColor = color;
+    this.mFlattener = flattener;
 
     this.waveSpectrum = function () {
         this.spectrum = fft.analyze();
@@ -16,43 +18,27 @@ function ParticleWave(x, y, radius) {
     this.show = function () {
 
         beginShape();
-        stroke(255,0,0);
+        this.position();
+        this.waveSpectrum();
+        fill(this.mColor);
         for (var a = PI; a < TWO_PI; a += 0.1) {
-            //particles.push(a); // Populate array
-
-            for (var i = 0; i < spectrum.length; i++) {
-                var amp = spectrum[i];
-
-
-                // for (var x = 0; x < particles.length; x++) {
-                //     var particle = particles[x];
-                //     particle = map(amp, 0, 256, 0, 100);
-                //     var r = radius + particle;
-                //     //console.log(r);
-                //     var x = r * cos(a) * 2;
-                //     var y = r * sin(a);
-                //     //vertex(x, y);
-                //     ellipse(x, y, 4, 4);
-                // }
-
+            for (var i = 0; i < this.waveSpectrum().length; i++) {
+                this.amp = this.waveSpectrum()[i];
             }
 
-            var offset = map(amp, 0, 256, 0, 400);
-            var r = radius + offset;
-            //console.log(r);
-            var x = r * cos(a) * 2;
-            var y = r * sin(a);
-            vertex(x, y);
+            this.offset = map(this.amp, 0, 256, 0, 400);
+            this.r = this.mRadius + this.offset;
+            this.x = this.r * cos(a) * this.mFlattener;
+            this.y = this.r * sin(a);
+            vertex(this.x, this.y);
             //ellipse(x, y, 4, 4);
-
         }
-
         endShape();
 
     }
 
     this.position = function () {
-        translate(this.X, this.Y);
+        translate(this.mX, this.mY);
     }
 
 
