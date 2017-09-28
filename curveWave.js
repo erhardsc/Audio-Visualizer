@@ -1,0 +1,5 @@
+// curveWave class
+
+function CurveWave(){
+
+}

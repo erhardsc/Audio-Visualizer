@@ -36,8 +36,7 @@ function setup() {
         radius = constrain(window.innerWidth, 500, 700);
     }
 
-    fft = new p5.FFT();
-    fft.smooth(0.95);
+    fft = new p5.FFT(0.95, 64);
 
     var dark = color('rgba(22, 25, 37, .85)');
     var grey = color('rgb(142, 137, 137)');
@@ -68,7 +67,7 @@ function amplitude(){
 
     for (var i = 0; i < spectrum.length; i++) {
         var frequency = spectrum[i];
-        var amp = map(frequency, 0, 256, 200, 500);
+        var amp = map(frequency, 0, 256, 200, 3000);
 
         return amp;
     }
@@ -80,75 +79,27 @@ function draw() {
     //wave.show();
     //wave2.show();
 
-    // strokeWeight(4);
-    // point(100, y);
-    // point(150, 50);
-    // point(250, 60);
-    // point(300, 200);
-    // strokeWeight(1);
-    // stroke(255);
-
-
-    // beginShape();
-    // curveVertex(100, amplitude());
-    // curveVertex(150, 50);
-    // curveVertex(250, 60);
-    // curveVertex(300, 200);
-    // endShape();
-
-    // strokeWeight(4);
-    // point(100, 200);
-    // point(150, 50);
-    // point(250, 60);
-    // point(300, 200);
-    // strokeWeight(1);
-    // stroke(255);
-    //  fill(40);
-    //
-
-    // translate(width/2, height/2);
-    // beginShape();
-    // curveVertex(amplitude(), 200);
-    // curveVertex(100, 200);
-    // curveVertex(150, 50);
-    // curveVertex(250, 60);
-    // curveVertex(300, 200);
-    // curveVertex(300, 200);
-    // endShape();
+    translate(0, height/2);
 
     stroke(0);
 
     strokeWeight(4);
-    /*2*/point(100, amplitude());
-    /*2*/point(100, 50);
-    /*3*/point(250, 60);
-    /*4*/point(300, 200);
-    /*1*/point(100, 200);
-    /*1*/point(100, 200);
+    /*1*/point(0, amplitude());
+    /*1*/point(0, 50);
+    /*2*/point(width, 60);
+    /*3*/point(width, height);
+    /*4*/point(0, height);
+    /*4*/point(0, height);
     strokeWeight(1);
 
-
-
     beginShape();
-    /*2*/curveVertex(100, amplitude());
-    /*2*/curveVertex(100, 50);
-    /*3*/curveVertex(250, 60);
-    /*4*/curveVertex(300, 200);
-    /*1*/curveVertex(100, 200);
-    /*1*/curveVertex(100, 200);
+    /*2*/curveVertex(0, amplitude());
+    /*2*/curveVertex(0, 50);
+    /*3*/curveVertex(width, 60);
+    /*4*/curveVertex(width, height);
+    /*1*/curveVertex(0, height);
+    /*1*/curveVertex(0, height);
     endShape();
-
-
-    // fill(40);
-    //
-    // beginShape();
-    // curveVertex(mouseX, mouseY);
-    // curveVertex(100, 200);
-    // curveVertex(150, 50);
-    // curveVertex(250, 60);
-    // curveVertex(300, 200);
-    // curveVertex(300, 200);
-    // endShape();
 
     // strokeWeight(4);
     // point(0, height);
