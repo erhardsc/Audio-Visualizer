@@ -1,1 +1,1 @@
-function CurveWave(){}
+function CurveWave(t,e){this.color=t,this.limiter=e,this.amplitude=function(){this.spectrum=fft.analyze();for(var t=0;t<this.spectrum.length;t++)return this.frequency=this.spectrum[t],this.amp=map(this.frequency*this.limiter,0,256,200,3e3),this.amp},this.show=function(){noStroke(),fill(this.color),this.position(),beginShape(),curveVertex(0,this.amplitude()),curveVertex(0,50),curveVertex(width,60),curveVertex(width,height),curveVertex(0,height),curveVertex(0,height),endShape()},this.position=function(){translate(0,height/2)}}
