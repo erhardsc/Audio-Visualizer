@@ -16,34 +16,21 @@ function Wave (color, posX, posY, limiter, flipWave) {
 
     this.show = function (amp) {
 
-        // beginShape();
-        //     stroke(this.mColor);
-        //     strokeWeight(10);
-        //     smooth();
-        //     this.position();
-        //     this.waveSpectrum();
-        //
-        //         // if (this.mFlipWave){
-        //         //    this.flipWaveHorizontally();
-        //         //    //console.log("flip");
-        //         // } else {
-        //             this.amplitude();
-        //         //}
-        // endShape();
-        this.radius = 150;
-
         beginShape();
-        for (var a = 0; a < TWO_PI; a += 0.1) {
+            stroke(this.mColor);
+            strokeWeight(10);
+            smooth();
+            this.position();
+            this.waveSpectrum();
 
-            this.offset = map(amp, 0, 256, -25, 25);
-            this.r = this.radius + this.offset;
-            this.x = this.r * cos(a);
-            this.y = this.r * sin(a);
-            vertex(this.x, this.y);
-
-            //ellipse(x, y, 4, 4);
-        }
+                // if (this.mFlipWave){
+                //    this.flipWaveHorizontally();
+                //    //console.log("flip");
+                // } else {
+                    this.amplitude();
+                //}
         endShape();
+
 
     }
 
@@ -72,13 +59,11 @@ function Wave (color, posX, posY, limiter, flipWave) {
 
             this.amp = this.waveSpectrum()[i];
 
-            //this.y = map(this.amp/this.mLimiter, 0, 256, height, 0);
+            this.y = map(this.amp/this.mLimiter, 0, 256, height, 0);
 
-            show(amp);
+            line(i * 50, height * 2, i * 50, this.y);
 
-            //line(i * 50, height * 2, i * 50, this.y);
-
-           // ellipse(i * 50, this.y, i * 50, height);
+           //ellipse(i * 50, this.y, i * 50, height);
         }
 
         //ellipse(i * 50, this.y, i * 50, height);

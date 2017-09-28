@@ -16,22 +16,22 @@ function ParticleWave(xpos, ypos, radius, flattener, color) {
     }
 
     this.show = function () {
-
+        fill(this.mColor);
         beginShape();
         this.position();
         this.waveSpectrum();
-        fill(this.mColor);
+
         for (var a = PI; a < TWO_PI; a += 0.1) {
             for (var i = 0; i < this.waveSpectrum().length; i++) {
                 this.amp = this.waveSpectrum()[i];
+                this.offset = map(this.amp, 0, 256, 0, 400);
+                this.r = this.mRadius + this.offset;
+                this.x = this.r * cos(a) * this.mFlattener;
+                this.y = this.r * sin(a);
+                vertex(this.x, this.y);
+                //ellipse(this.x, this.y, 4, 4);
             }
 
-            this.offset = map(this.amp, 0, 256, 0, 400);
-            this.r = this.mRadius + this.offset;
-            this.x = this.r * cos(a) * this.mFlattener;
-            this.y = this.r * sin(a);
-            vertex(this.x, this.y);
-            //ellipse(x, y, 4, 4);
         }
         endShape();
 
