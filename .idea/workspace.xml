@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae11f7b7-9809-47a2-9233-23859384df2e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curveWave-min.js" afterPath="$PROJECT_DIR$/curveWave-min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curveWave.js" afterPath="$PROJECT_DIR$/curveWave.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketch-min.js" afterPath="$PROJECT_DIR$/sketch-min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketch.js" afterPath="$PROJECT_DIR$/sketch.js" />
     </list>
@@ -30,41 +30,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sketch.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sketch.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+            <state relative-caret-position="322">
+              <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="curveWave.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="curveWave.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/curveWave.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="particleWave.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/particleWave.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wave.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wave.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="65" column="13" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -101,8 +81,8 @@
         <option value="$PROJECT_DIR$/particleWave.js" />
         <option value="$PROJECT_DIR$/wave.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/sketch.js" />
         <option value="$PROJECT_DIR$/curveWave.js" />
+        <option value="$PROJECT_DIR$/sketch.js" />
       </list>
     </option>
   </component>
@@ -215,12 +195,12 @@
       <workItem from="1505787434347" duration="380000" />
       <workItem from="1505787842995" duration="2406000" />
       <workItem from="1505794892965" duration="12663000" />
-      <workItem from="1506544504987" duration="15225000" />
+      <workItem from="1506544504987" duration="22439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83873000" />
+    <option name="totallyTimeSpent" value="91087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1223" y="22" width="697" height="1053" extended-state="0" />
@@ -1205,18 +1185,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sketch.js">
+    <entry file="file://$PROJECT_DIR$/curveWave.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        <state relative-caret-position="315">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curveWave.js">
+    <entry file="file://$PROJECT_DIR$/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="322">
+          <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
           <folding />
         </state>
       </provider>
