@@ -62,7 +62,7 @@ function amplitude(){
 }
 
 function draw() {
-    background(50, 0, 150);
+    background("rgb(22,25,37)");
     // Draw FPS (rounded to 2 decimal places) at the bottom left of the screen
     var fps = frameRate();
     fill(0);
@@ -93,11 +93,11 @@ function draw() {
     // wave3.show();
     // pop();
 
-    var gradX = mouseX - width / 2;
-    var gradY = mouseY - height / 2;
-    var gradient = ctx.createRadialGradient(0, 0, 50, gradX, gradY, 0);
-    gradient.addColorStop(0, "black");
-    gradient.addColorStop(1, "white");
+    var gradX = width;
+    var gradY = height;
+    var gradient = ctx.createRadialGradient(width*.14, amplitude(), width, gradX, gradY, 0);
+    gradient.addColorStop(0, "rgb(48, 35, 174)");
+    gradient.addColorStop(1, "rgb(200,109,215)");
     ctx.fillStyle = gradient;
 
     strokeWeight(4);
@@ -122,6 +122,6 @@ function draw() {
     bezierVertex(width*.97,amplitude(),  width*.96,height*.67,   width * .98,height*.7);//peak3-right
     vertex(width * .98,height *.98);
 
-    endShape();
+    endShape(CLOSE);
 
 }
