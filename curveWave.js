@@ -23,7 +23,7 @@ function CurveWave(color, limiter){
 
         noStroke();
         fill(this.color);
-        this.position();
+        //this.position();
 
         beginShape();
         /*2*/curveVertex(this.amplitude()[0], this.amplitude()[1]); // Adjust angle of curve
