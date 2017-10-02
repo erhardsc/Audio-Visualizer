@@ -65,8 +65,8 @@ function amplitude(){
         var peak2_leftControlY = map(spectrum[i], 0, 256, height*.75, height*.65);
 
         // Peak 3
-        var peak3_leftControlX = map(spectrum[i], 0, 256, width*.88, width*.98);
-        var peak3_leftControlY = map(spectrum[i], 0, 256, height*.95, height*.85);
+        var peak3_leftControlX = map(spectrum[i], 0, 256, width*.92, width*.98);
+        var peak3_leftControlY = map(spectrum[i], 0, 256, height*.58, height*.48);
 
         return [peak1_leftControlX,
                 peak1_leftControlY,
@@ -100,7 +100,7 @@ function draw() {
          // Peak 1
     //RED
     stroke(255,0,0);
-    line(width*.35,height*.85, width*.15,height*.35);
+    line(width*.35,height*.85, amplitude()[0],amplitude()[1]);
 
     //GREEN
     stroke(0,255,0);
@@ -113,7 +113,7 @@ function draw() {
 
     //GREEN
     stroke(0,255,0);
-    line(width*.80,height*.8, width*.55,height*.65);
+    line(width*.80,height*.8, amplitude()[2],amplitude()[3]);
 
 
          // Peak 3
@@ -123,7 +123,7 @@ function draw() {
 
     //GREEN
     stroke(0,255,0);
-    line(width*.98,height*.7, width*.92,height*.48);
+    line(width*.98,height*.7, amplitude()[4],amplitude()[5]);
 
 
     stroke(0);
