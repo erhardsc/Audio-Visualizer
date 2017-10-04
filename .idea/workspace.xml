@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae11f7b7-9809-47a2-9233-23859384df2e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketch-min.js" afterPath="$PROJECT_DIR$/sketch-min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketch.js" afterPath="$PROJECT_DIR$/sketch.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="sketch.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="186" column="24" lean-forward="false" selection-start-line="186" selection-start-column="24" selection-end-line="186" selection-end-column="24" />
+            <state relative-caret-position="848">
+              <caret line="105" column="18" lean-forward="false" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -195,12 +193,12 @@
       <workItem from="1505794892965" duration="12663000" />
       <workItem from="1506544504987" duration="43051000" />
       <workItem from="1506841925838" duration="14001000" />
-      <workItem from="1507132964216" duration="3578000" />
+      <workItem from="1507132964216" duration="4755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129278000" />
+    <option name="totallyTimeSpent" value="130455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1090" y="22" width="830" height="1053" extended-state="0" />
@@ -1194,8 +1192,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="186" column="24" lean-forward="false" selection-start-line="186" selection-start-column="24" selection-end-line="186" selection-end-column="24" />
+        <state relative-caret-position="848">
+          <caret line="105" column="18" lean-forward="false" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="18" />
           <folding />
         </state>
       </provider>
