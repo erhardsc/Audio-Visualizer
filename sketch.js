@@ -99,7 +99,7 @@ function draw() {
     for (var i = 0; i < len; i++) {
         var point = smoothPoint(scaledSpectrum, i, 4);
         var x = map(i, 0, len-1, 0, width);
-        var y = map(point, 0, 255, height, height*.7);
+        var y = map(point, 0, 255, height, height*.75);
         curveVertex(x, y);
     }
     curveVertex(width, height);
@@ -121,6 +121,27 @@ function draw() {
  *  @return {Array} scaledSpectrum array of the spectrum reorganized by division
  *                                 of octaves
  */
+
+function playerVisualizer() {
+    push();
+
+    stroke(255);
+    line(0, height / 2, width, height /2);
+
+    var waveform = fft.waveform();
+    noFill();
+    beginShape();
+    stroke(255);
+    strokeWeight(1);
+    for (var i = 0; i< waveform.length; i++){
+        var x = map(i, 0, waveform.length, 0, width);
+        var y = map( waveform[i], -1, 1, 0, height);
+        vertex(x,y);
+    }
+    endShape();
+
+    pop();
+}
 
 function splitOctaves(spectrum, slicesPerOctave) {
     var scaledSpectrum = [];
